@@ -7,7 +7,7 @@ namespace PlayGround_c_
     {
         private Dictionary <string,Dictionary<string,string>> _iniFile = new Dictionary<string,Dictionary<string,string>>();
         private string _name = "";
-        
+        //----------------------------------------------------------
         public IniFile(string fileName)
         {
             if(File.Exists(fileName))
@@ -19,6 +19,7 @@ namespace PlayGround_c_
                 Load();
             }
         }
+        //----------------------------------------------------------
         private void Load()
         {
             using (StreamReader reader = new StreamReader(File.OpenRead(_name)))
@@ -64,6 +65,7 @@ namespace PlayGround_c_
             }
             Console.WriteLine($"{_iniFile.Keys.Count} Headers with total of {counter} configs were found");
         }
+        //----------------------------------------------------------
         public void DisplayHeader(string header)
         {
             Console.Clear();
