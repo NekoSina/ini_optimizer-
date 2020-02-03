@@ -85,13 +85,9 @@ namespace PlayGround_c_
             if(_iniFile.ContainsKey(header))
             {
                 if(_iniFile[header].ContainsKey(key))
-                {
                     return _iniFile[header][key];
-                }
                 else
-                {
                     return $"{key} not found";
-                }
             }
             else
             {
