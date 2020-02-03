@@ -32,6 +32,7 @@ namespace PlayGround_c_
                     var curLine = reader.ReadLine();
                     
                     if(!string.IsNullOrEmpty(curLine))
+                    {
                         if(curLine.StartsWith("["))
                         {
                             curHeader = curLine;
@@ -45,6 +46,7 @@ namespace PlayGround_c_
                             else
                             numberOfMissings++;
                         }
+                    }
                 }
                 Console.WriteLine($"{_iniFile.Keys.Count} Headers with total of {counter} configs were found. {numberOfMissings} were missed");
             }            
